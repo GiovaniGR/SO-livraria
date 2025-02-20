@@ -44,30 +44,65 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Livros/{id}": {
       "put": {
         "tags": [
           "Livros"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateBooks"
+                "$ref": "#/components/schemas/Livro"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateBooks"
+                "$ref": "#/components/schemas/Livro"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateBooks"
+                "$ref": "#/components/schemas/Livro"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Livros/{titulo}": {
+      "delete": {
+        "tags": [
+          "Livros"
+        ],
+        "parameters": [
+          {
+            "name": "titulo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -85,32 +120,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "titulo": {
-            "type": "string",
-            "nullable": true
-          },
-          "autor": {
-            "type": "string",
-            "nullable": true
-          },
-          "genero": {
-            "type": "string",
-            "nullable": true
-          },
-          "price": {
-            "type": "number",
-            "format": "double"
-          },
-          "qtdEstq": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateBooks": {
-        "type": "object",
-        "properties": {
           "titulo": {
             "type": "string",
             "nullable": true

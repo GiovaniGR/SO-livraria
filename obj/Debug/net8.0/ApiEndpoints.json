@@ -28,14 +28,35 @@
   {
     "ContainingType": "Livraria.Controllers.LivrosController",
     "Method": "AlterandoLivros",
-    "RelativePath": "api/Livros",
+    "RelativePath": "api/Livros/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "Livraria.Communication.Requests.UpdateBooks",
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "livroAtt",
+        "Type": "Livraria.Class.Livro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Livraria.Controllers.LivrosController",
+    "Method": "DeleteLivros",
+    "RelativePath": "api/Livros/{titulo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "titulo",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

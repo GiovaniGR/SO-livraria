@@ -19,7 +19,7 @@ public class LivrosController : ControllerBase
         {
             return BadRequest("Todos os campos são orbigatórios");
         };
-
+        
 
         Livro l = new Livro
         {
@@ -31,10 +31,11 @@ public class LivrosController : ControllerBase
 
         };
 
+        novoLivro.Id = books.Count > 0 ? books.Max(b => b.Id) + 1 : 1; //método que adiciona o id manualmente no livro
+
         books.Add(novoLivro);
 
-
-        return Ok("Livro cadastrado com sucesso");
+        return Created();
     }
 
     [HttpGet] //Método para listar livros
@@ -47,14 +48,14 @@ public class LivrosController : ControllerBase
         return Ok(books);
     }
 
-    [HttpPut("{id}")]
+    [HttpPut("{id}")]//método para atualizar livros
     public IActionResult AlterandoLivros(int id, [FromBody]Livro livroAtt) {
 
-        if (AlterandoLivros == null) {
+        if (livroAtt == null) {
             return BadRequest("O livro tem que ser válido");
         }
 
-        var buscarLivro = books.FirstOrDefault(l => l.Id == id);
+        var buscarLivro = books.FirstOrDefault(l => l.Id == id); // expressão => usada para capturar o id
 
         if (buscarLivro == null) {
             return NotFound("Livro não encontrado");
@@ -66,7 +67,20 @@ public class LivrosController : ControllerBase
         buscarLivro.Price = livroAtt.Price;
         buscarLivro.QtdEstq = livroAtt.QtdEstq;
 
-        return Ok("Livro atualizado");
+        return Ok("");
+    }
+
+    [HttpDelete("{titulo}")]// metodo para deletar livros
+    public IActionResult DeleteLivros(string titulo) 
+    {
+        var deletarLivros = books.FirstOrDefault(l => l.Titulo.Equals(titulo, StringComparison.OrdinalIgnoreCase));
+
+        if (deletarLivros == null) {
+            return BadRequest("Livro não encontrado");
+        }
+
+        books.Remove(deletarLivros);
+        return Ok($"Livro {titulo} deletado");
     }
     
 }

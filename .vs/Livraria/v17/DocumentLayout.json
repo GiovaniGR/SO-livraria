@@ -34,7 +34,8 @@
               "RelativeToolTip": "Livraria.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-02-17T19:12:05.024Z"
+              "WhenOpened": "2025-02-17T19:12:05.024Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -44,7 +45,7 @@
               "RelativeDocumentMoniker": "Controllers\\LivrosController.cs",
               "ToolTip": "C:\\\u00C1rea de Trabalho\\BookStore\\Livraria\\Controllers\\LivrosController.cs",
               "RelativeToolTip": "Controllers\\LivrosController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAqwEIAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-14T18:29:08.343Z",
               "EditorCaption": ""
@@ -57,9 +58,10 @@
               "RelativeDocumentMoniker": "Class\\Livro.cs",
               "ToolTip": "C:\\\u00C1rea de Trabalho\\BookStore\\Livraria\\Class\\Livro.cs",
               "RelativeToolTip": "Class\\Livro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T12:12:18.889Z"
+              "WhenOpened": "2025-02-12T12:12:18.889Z",
+              "EditorCaption": ""
             }
           ]
         }
