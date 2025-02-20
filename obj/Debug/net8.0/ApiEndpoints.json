@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "Livraria.Controllers.LivrosController",
+    "Method": "AddLivro",
+    "RelativePath": "api/Livros",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novoLivro",
+        "Type": "Livraria.Class.Livro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Livraria.Controllers.LivrosController",
+    "Method": "GetLivros",
+    "RelativePath": "api/Livros",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Livraria.Controllers.LivrosController",
+    "Method": "AlterandoLivros",
+    "RelativePath": "api/Livros",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Livraria.Communication.Requests.UpdateBooks",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
